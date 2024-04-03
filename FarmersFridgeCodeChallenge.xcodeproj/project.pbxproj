@@ -1,0 +1,623 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2610DC142BBE103100CAE40C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2610DC132BBE103100CAE40C /* AppDelegate.swift */; };
+		2610DC162BBE103100CAE40C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2610DC152BBE103100CAE40C /* SceneDelegate.swift */; };
+		2610DC182BBE103100CAE40C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2610DC172BBE103100CAE40C /* ViewController.swift */; };
+		2610DC1B2BBE103100CAE40C /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 2610DC1A2BBE103100CAE40C /* Base */; };
+		2610DC1E2BBE103100CAE40C /* FarmersFridgeCodeChallenge.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2610DC1C2BBE103100CAE40C /* FarmersFridgeCodeChallenge.xcdatamodeld */; };
+		2610DC202BBE103400CAE40C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2610DC1F2BBE103400CAE40C /* Assets.xcassets */; };
+		2610DC232BBE103400CAE40C /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 2610DC222BBE103400CAE40C /* Base */; };
+		2610DC2E2BBE103400CAE40C /* FarmersFridgeCodeChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2610DC2D2BBE103400CAE40C /* FarmersFridgeCodeChallengeTests.swift */; };
+		2610DC382BBE103400CAE40C /* FarmersFridgeCodeChallengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2610DC372BBE103400CAE40C /* FarmersFridgeCodeChallengeUITests.swift */; };
+		2610DC3A2BBE103400CAE40C /* FarmersFridgeCodeChallengeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2610DC392BBE103400CAE40C /* FarmersFridgeCodeChallengeUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2610DC2A2BBE103400CAE40C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2610DC082BBE103100CAE40C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2610DC0F2BBE103100CAE40C;
+			remoteInfo = FarmersFridgeCodeChallenge;
+		};
+		2610DC342BBE103400CAE40C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2610DC082BBE103100CAE40C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2610DC0F2BBE103100CAE40C;
+			remoteInfo = FarmersFridgeCodeChallenge;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2610DC102BBE103100CAE40C /* FarmersFridgeCodeChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FarmersFridgeCodeChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2610DC132BBE103100CAE40C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2610DC152BBE103100CAE40C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		2610DC172BBE103100CAE40C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2610DC1A2BBE103100CAE40C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2610DC1D2BBE103100CAE40C /* FarmersFridgeCodeChallenge.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FarmersFridgeCodeChallenge.xcdatamodel; sourceTree = "<group>"; };
+		2610DC1F2BBE103400CAE40C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2610DC222BBE103400CAE40C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2610DC242BBE103400CAE40C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2610DC292BBE103400CAE40C /* FarmersFridgeCodeChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FarmersFridgeCodeChallengeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2610DC2D2BBE103400CAE40C /* FarmersFridgeCodeChallengeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FarmersFridgeCodeChallengeTests.swift; sourceTree = "<group>"; };
+		2610DC332BBE103400CAE40C /* FarmersFridgeCodeChallengeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FarmersFridgeCodeChallengeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2610DC372BBE103400CAE40C /* FarmersFridgeCodeChallengeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FarmersFridgeCodeChallengeUITests.swift; sourceTree = "<group>"; };
+		2610DC392BBE103400CAE40C /* FarmersFridgeCodeChallengeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FarmersFridgeCodeChallengeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2610DC0D2BBE103100CAE40C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2610DC262BBE103400CAE40C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2610DC302BBE103400CAE40C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2610DC072BBE103100CAE40C = {
+			isa = PBXGroup;
+			children = (
+				2610DC122BBE103100CAE40C /* FarmersFridgeCodeChallenge */,
+				2610DC2C2BBE103400CAE40C /* FarmersFridgeCodeChallengeTests */,
+				2610DC362BBE103400CAE40C /* FarmersFridgeCodeChallengeUITests */,
+				2610DC112BBE103100CAE40C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2610DC112BBE103100CAE40C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2610DC102BBE103100CAE40C /* FarmersFridgeCodeChallenge.app */,
+				2610DC292BBE103400CAE40C /* FarmersFridgeCodeChallengeTests.xctest */,
+				2610DC332BBE103400CAE40C /* FarmersFridgeCodeChallengeUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2610DC122BBE103100CAE40C /* FarmersFridgeCodeChallenge */ = {
+			isa = PBXGroup;
+			children = (
+				2610DC132BBE103100CAE40C /* AppDelegate.swift */,
+				2610DC152BBE103100CAE40C /* SceneDelegate.swift */,
+				2610DC172BBE103100CAE40C /* ViewController.swift */,
+				2610DC192BBE103100CAE40C /* Main.storyboard */,
+				2610DC1F2BBE103400CAE40C /* Assets.xcassets */,
+				2610DC212BBE103400CAE40C /* LaunchScreen.storyboard */,
+				2610DC242BBE103400CAE40C /* Info.plist */,
+				2610DC1C2BBE103100CAE40C /* FarmersFridgeCodeChallenge.xcdatamodeld */,
+			);
+			path = FarmersFridgeCodeChallenge;
+			sourceTree = "<group>";
+		};
+		2610DC2C2BBE103400CAE40C /* FarmersFridgeCodeChallengeTests */ = {
+			isa = PBXGroup;
+			children = (
+				2610DC2D2BBE103400CAE40C /* FarmersFridgeCodeChallengeTests.swift */,
+			);
+			path = FarmersFridgeCodeChallengeTests;
+			sourceTree = "<group>";
+		};
+		2610DC362BBE103400CAE40C /* FarmersFridgeCodeChallengeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				2610DC372BBE103400CAE40C /* FarmersFridgeCodeChallengeUITests.swift */,
+				2610DC392BBE103400CAE40C /* FarmersFridgeCodeChallengeUITestsLaunchTests.swift */,
+			);
+			path = FarmersFridgeCodeChallengeUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2610DC0F2BBE103100CAE40C /* FarmersFridgeCodeChallenge */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2610DC3D2BBE103400CAE40C /* Build configuration list for PBXNativeTarget "FarmersFridgeCodeChallenge" */;
+			buildPhases = (
+				2610DC0C2BBE103100CAE40C /* Sources */,
+				2610DC0D2BBE103100CAE40C /* Frameworks */,
+				2610DC0E2BBE103100CAE40C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FarmersFridgeCodeChallenge;
+			productName = FarmersFridgeCodeChallenge;
+			productReference = 2610DC102BBE103100CAE40C /* FarmersFridgeCodeChallenge.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2610DC282BBE103400CAE40C /* FarmersFridgeCodeChallengeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2610DC402BBE103400CAE40C /* Build configuration list for PBXNativeTarget "FarmersFridgeCodeChallengeTests" */;
+			buildPhases = (
+				2610DC252BBE103400CAE40C /* Sources */,
+				2610DC262BBE103400CAE40C /* Frameworks */,
+				2610DC272BBE103400CAE40C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2610DC2B2BBE103400CAE40C /* PBXTargetDependency */,
+			);
+			name = FarmersFridgeCodeChallengeTests;
+			productName = FarmersFridgeCodeChallengeTests;
+			productReference = 2610DC292BBE103400CAE40C /* FarmersFridgeCodeChallengeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		2610DC322BBE103400CAE40C /* FarmersFridgeCodeChallengeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2610DC432BBE103400CAE40C /* Build configuration list for PBXNativeTarget "FarmersFridgeCodeChallengeUITests" */;
+			buildPhases = (
+				2610DC2F2BBE103400CAE40C /* Sources */,
+				2610DC302BBE103400CAE40C /* Frameworks */,
+				2610DC312BBE103400CAE40C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2610DC352BBE103400CAE40C /* PBXTargetDependency */,
+			);
+			name = FarmersFridgeCodeChallengeUITests;
+			productName = FarmersFridgeCodeChallengeUITests;
+			productReference = 2610DC332BBE103400CAE40C /* FarmersFridgeCodeChallengeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2610DC082BBE103100CAE40C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1530;
+				LastUpgradeCheck = 1530;
+				TargetAttributes = {
+					2610DC0F2BBE103100CAE40C = {
+						CreatedOnToolsVersion = 15.3;
+					};
+					2610DC282BBE103400CAE40C = {
+						CreatedOnToolsVersion = 15.3;
+						TestTargetID = 2610DC0F2BBE103100CAE40C;
+					};
+					2610DC322BBE103400CAE40C = {
+						CreatedOnToolsVersion = 15.3;
+						TestTargetID = 2610DC0F2BBE103100CAE40C;
+					};
+				};
+			};
+			buildConfigurationList = 2610DC0B2BBE103100CAE40C /* Build configuration list for PBXProject "FarmersFridgeCodeChallenge" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2610DC072BBE103100CAE40C;
+			productRefGroup = 2610DC112BBE103100CAE40C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2610DC0F2BBE103100CAE40C /* FarmersFridgeCodeChallenge */,
+				2610DC282BBE103400CAE40C /* FarmersFridgeCodeChallengeTests */,
+				2610DC322BBE103400CAE40C /* FarmersFridgeCodeChallengeUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2610DC0E2BBE103100CAE40C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2610DC202BBE103400CAE40C /* Assets.xcassets in Resources */,
+				2610DC232BBE103400CAE40C /* Base in Resources */,
+				2610DC1B2BBE103100CAE40C /* Base in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2610DC272BBE103400CAE40C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2610DC312BBE103400CAE40C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2610DC0C2BBE103100CAE40C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2610DC182BBE103100CAE40C /* ViewController.swift in Sources */,
+				2610DC142BBE103100CAE40C /* AppDelegate.swift in Sources */,
+				2610DC1E2BBE103100CAE40C /* FarmersFridgeCodeChallenge.xcdatamodeld in Sources */,
+				2610DC162BBE103100CAE40C /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2610DC252BBE103400CAE40C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2610DC2E2BBE103400CAE40C /* FarmersFridgeCodeChallengeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2610DC2F2BBE103400CAE40C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2610DC382BBE103400CAE40C /* FarmersFridgeCodeChallengeUITests.swift in Sources */,
+				2610DC3A2BBE103400CAE40C /* FarmersFridgeCodeChallengeUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2610DC2B2BBE103400CAE40C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2610DC0F2BBE103100CAE40C /* FarmersFridgeCodeChallenge */;
+			targetProxy = 2610DC2A2BBE103400CAE40C /* PBXContainerItemProxy */;
+		};
+		2610DC352BBE103400CAE40C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2610DC0F2BBE103100CAE40C /* FarmersFridgeCodeChallenge */;
+			targetProxy = 2610DC342BBE103400CAE40C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2610DC192BBE103100CAE40C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2610DC1A2BBE103100CAE40C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2610DC212BBE103400CAE40C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2610DC222BBE103400CAE40C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2610DC3B2BBE103400CAE40C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2610DC3C2BBE103400CAE40C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2610DC3E2BBE103400CAE40C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FarmersFridgeCodeChallenge/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fly.FarmersFridgeCodeChallenge;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2610DC3F2BBE103400CAE40C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FarmersFridgeCodeChallenge/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fly.FarmersFridgeCodeChallenge;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		2610DC412BBE103400CAE40C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fly.FarmersFridgeCodeChallengeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FarmersFridgeCodeChallenge.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/FarmersFridgeCodeChallenge";
+			};
+			name = Debug;
+		};
+		2610DC422BBE103400CAE40C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fly.FarmersFridgeCodeChallengeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FarmersFridgeCodeChallenge.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/FarmersFridgeCodeChallenge";
+			};
+			name = Release;
+		};
+		2610DC442BBE103400CAE40C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fly.FarmersFridgeCodeChallengeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FarmersFridgeCodeChallenge;
+			};
+			name = Debug;
+		};
+		2610DC452BBE103400CAE40C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fly.FarmersFridgeCodeChallengeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FarmersFridgeCodeChallenge;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2610DC0B2BBE103100CAE40C /* Build configuration list for PBXProject "FarmersFridgeCodeChallenge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2610DC3B2BBE103400CAE40C /* Debug */,
+				2610DC3C2BBE103400CAE40C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2610DC3D2BBE103400CAE40C /* Build configuration list for PBXNativeTarget "FarmersFridgeCodeChallenge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2610DC3E2BBE103400CAE40C /* Debug */,
+				2610DC3F2BBE103400CAE40C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2610DC402BBE103400CAE40C /* Build configuration list for PBXNativeTarget "FarmersFridgeCodeChallengeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2610DC412BBE103400CAE40C /* Debug */,
+				2610DC422BBE103400CAE40C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2610DC432BBE103400CAE40C /* Build configuration list for PBXNativeTarget "FarmersFridgeCodeChallengeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2610DC442BBE103400CAE40C /* Debug */,
+				2610DC452BBE103400CAE40C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		2610DC1C2BBE103100CAE40C /* FarmersFridgeCodeChallenge.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				2610DC1D2BBE103100CAE40C /* FarmersFridgeCodeChallenge.xcdatamodel */,
+			);
+			currentVersion = 2610DC1D2BBE103100CAE40C /* FarmersFridgeCodeChallenge.xcdatamodel */;
+			path = FarmersFridgeCodeChallenge.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 2610DC082BBE103100CAE40C /* Project object */;
+}
