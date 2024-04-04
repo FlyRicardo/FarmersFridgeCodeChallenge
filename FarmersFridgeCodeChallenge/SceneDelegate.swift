@@ -17,6 +17,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let _ = (scene as? UIWindowScene) else { return }
+        
+        // Configure Window
+        window?.tintColor = UIColor(red:0.2941, green:0.4941, blue:0.1451, alpha:1.0)
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
