@@ -16,6 +16,12 @@
 		2610DC3A2BBE103400CAE40C /* FarmersFridgeCodeChallengeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2610DC392BBE103400CAE40C /* FarmersFridgeCodeChallengeUITestsLaunchTests.swift */; };
 		2610DC4B2BBE10B300CAE40C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2610DC472BBE10B300CAE40C /* LaunchScreen.storyboard */; };
 		2610DC4C2BBE10B300CAE40C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2610DC492BBE10B300CAE40C /* Main.storyboard */; };
+		26D104C92BBF1BD5003BBAB8 /* StemmingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D104C82BBF1BD5003BBAB8 /* StemmingViewController.swift */; };
+		26D104CE2BBF1D81003BBAB8 /* StemWordsHistoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D104CD2BBF1D81003BBAB8 /* StemWordsHistoryTableViewController.swift */; };
+		26D104D02BBF1DD7003BBAB8 /* StemmingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D104CF2BBF1DD7003BBAB8 /* StemmingTableViewCell.swift */; };
+		26D104D22BBF1DF9003BBAB8 /* StemWordsHistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D104D12BBF1DF9003BBAB8 /* StemWordsHistoryTableViewCell.swift */; };
+		26D380B32BBF4CEE00A0A296 /* StemWord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D380B22BBF4CEE00A0A296 /* StemWord.swift */; };
+		26D380B62BBF521D00A0A296 /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D380B52BBF521D00A0A296 /* ReusableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +55,12 @@
 		2610DC392BBE103400CAE40C /* FarmersFridgeCodeChallengeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FarmersFridgeCodeChallengeUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		2610DC462BBE10B300CAE40C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2610DC482BBE10B300CAE40C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		26D104C82BBF1BD5003BBAB8 /* StemmingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StemmingViewController.swift; sourceTree = "<group>"; };
+		26D104CD2BBF1D81003BBAB8 /* StemWordsHistoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StemWordsHistoryTableViewController.swift; sourceTree = "<group>"; };
+		26D104CF2BBF1DD7003BBAB8 /* StemmingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StemmingTableViewCell.swift; sourceTree = "<group>"; };
+		26D104D12BBF1DF9003BBAB8 /* StemWordsHistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StemWordsHistoryTableViewCell.swift; sourceTree = "<group>"; };
+		26D380B22BBF4CEE00A0A296 /* StemWord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StemWord.swift; sourceTree = "<group>"; };
+		26D380B52BBF521D00A0A296 /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +111,8 @@
 		2610DC122BBE103100CAE40C /* FarmersFridgeCodeChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				26D380B42BBF51FC00A0A296 /* Protocols */,
+				26D104CC2BBF1D2D003BBAB8 /* Models */,
 				2610DC542BBE399800CAE40C /* View Controllers */,
 				2610DC4A2BBE10B300CAE40C /* Storyboards */,
 				2610DC132BBE103100CAE40C /* AppDelegate.swift */,
@@ -140,7 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				2610DC552BBE39D200CAE40C /* StemmingViewController */,
-				2610DC562BBE3A1600CAE40C /* WordsSteamViewController */,
+				2610DC562BBE3A1600CAE40C /* StemWordsHistoryViewController */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -148,22 +162,25 @@
 		2610DC552BBE39D200CAE40C /* StemmingViewController */ = {
 			isa = PBXGroup;
 			children = (
+				26D104C82BBF1BD5003BBAB8 /* StemmingViewController.swift */,
 				26D104C22BBF0421003BBAB8 /* Table View Cells */,
 			);
 			path = StemmingViewController;
 			sourceTree = "<group>";
 		};
-		2610DC562BBE3A1600CAE40C /* WordsSteamViewController */ = {
+		2610DC562BBE3A1600CAE40C /* StemWordsHistoryViewController */ = {
 			isa = PBXGroup;
 			children = (
+				26D104CD2BBF1D81003BBAB8 /* StemWordsHistoryTableViewController.swift */,
 				26D104C32BBF0436003BBAB8 /* Table View Cells */,
 			);
-			path = WordsSteamViewController;
+			path = StemWordsHistoryViewController;
 			sourceTree = "<group>";
 		};
 		26D104C22BBF0421003BBAB8 /* Table View Cells */ = {
 			isa = PBXGroup;
 			children = (
+				26D104CF2BBF1DD7003BBAB8 /* StemmingTableViewCell.swift */,
 			);
 			path = "Table View Cells";
 			sourceTree = "<group>";
@@ -171,8 +188,25 @@
 		26D104C32BBF0436003BBAB8 /* Table View Cells */ = {
 			isa = PBXGroup;
 			children = (
+				26D104D12BBF1DF9003BBAB8 /* StemWordsHistoryTableViewCell.swift */,
 			);
 			path = "Table View Cells";
+			sourceTree = "<group>";
+		};
+		26D104CC2BBF1D2D003BBAB8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				26D380B22BBF4CEE00A0A296 /* StemWord.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		26D380B42BBF51FC00A0A296 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				26D380B52BBF521D00A0A296 /* ReusableView.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -306,8 +340,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26D380B62BBF521D00A0A296 /* ReusableView.swift in Sources */,
 				2610DC142BBE103100CAE40C /* AppDelegate.swift in Sources */,
+				26D104CE2BBF1D81003BBAB8 /* StemWordsHistoryTableViewController.swift in Sources */,
 				2610DC1E2BBE103100CAE40C /* FarmersFridgeCodeChallenge.xcdatamodeld in Sources */,
+				26D104D22BBF1DF9003BBAB8 /* StemWordsHistoryTableViewCell.swift in Sources */,
+				26D104D02BBF1DD7003BBAB8 /* StemmingTableViewCell.swift in Sources */,
+				26D104C92BBF1BD5003BBAB8 /* StemmingViewController.swift in Sources */,
+				26D380B32BBF4CEE00A0A296 /* StemWord.swift in Sources */,
 				2610DC162BBE103100CAE40C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
