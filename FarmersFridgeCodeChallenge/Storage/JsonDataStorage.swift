@@ -9,7 +9,7 @@ import Foundation
 /**
      Struct responsible for reading and writting locally steam-words in JSON format
  */
-struct JsonDataStorage<T: Codable & Equatable>: Storable {
+struct JsonDataStorage: Storable {
     
     let fileName: String
     let extensionType: String
@@ -22,18 +22,33 @@ struct JsonDataStorage<T: Codable & Equatable>: Storable {
         self.extensionType = extensionType
     }
     
-     func read() -> [T]? {
+    func read() -> [StemWordData]? {
         return load()
     }
     
-     func write(_ data: [T]) {
+    func update(_ data: StemWordData) {
+        guard
+            var storedData = read(),
+            let index = storedData.firstIndex(where: { $0.id == data.id })
+        else {
+            return
+        }
+        
+        var dataToBeUpdated = storedData[index]
+        dataToBeUpdated.occurrance = dataToBeUpdated.occurrance + data.occurrance
+        dataToBeUpdated.inflectionalWords.append(contentsOf: data.inflectionalWords)
+        storedData[index] = dataToBeUpdated
+        save(storedData)
+    }
+    
+     func write(_ data: [StemWordData]) {
         guard var storedData = read() else {
             save(data)
             return
         }
         
         data.forEach { item in
-            if let index = storedData.firstIndex(where:{ $0 == item }) {
+            if let index = storedData.firstIndex(where:{ $0.id == item.id }) {
                 storedData[index] = item
             }
             else {
@@ -44,9 +59,9 @@ struct JsonDataStorage<T: Codable & Equatable>: Storable {
         save(storedData)
     }
     
-     func delete(_ data: T) {
+     func delete(_ data: StemWordData) {
         if var storedData = read() {
-            if let index = storedData.firstIndex(where:{ $0 == data }) {
+            if let index = storedData.firstIndex(where:{ $0.id == data.id }) {
                 storedData.remove(at: index)
                 save(storedData)
             }
@@ -64,7 +79,7 @@ struct JsonDataStorage<T: Codable & Equatable>: Storable {
 // MARK: - Private utility methods
 
 private extension JsonDataStorage {
-     func save(_ data: [T]) {
+     func save(_ data: [StemWordData]) {
         guard let jsonData = encodeToJson(data) else {
             return
         }
@@ -86,7 +101,7 @@ private extension JsonDataStorage {
         }
     }
     
-     func load() -> [T]? {
+     func load() -> [StemWordData]? {
         
         let fileManager = FileManager.default
         do {
@@ -110,7 +125,7 @@ private extension JsonDataStorage {
         
     }
     
-     func encodeToJson(_ data: [T]) -> Data? {
+     func encodeToJson(_ data: [StemWordData]) -> Data? {
         do {
             let encoder = JSONEncoder()
             let jsonData = try encoder.encode(data)
@@ -121,10 +136,10 @@ private extension JsonDataStorage {
         }
     }
     
-     func decodeJson(data: Data) -> [T]? {
+     func decodeJson(data: Data) -> [StemWordData]? {
         do {
             let decoder = JSONDecoder()
-            let decodedData = try decoder.decode([T].self, from: data)
+            let decodedData = try decoder.decode([StemWordData].self, from: data)
             return decodedData
         } catch {
             print(RepositoriesError.errorDecodingJson(error).localizedDescription)

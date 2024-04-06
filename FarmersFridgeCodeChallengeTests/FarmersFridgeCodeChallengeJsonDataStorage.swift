@@ -10,13 +10,13 @@ import XCTest
 
 final class FarmersFridgeCodeChallengeJsonDataStorage: XCTestCase {
     
-    var jsonDataStorage = JsonDataStorage<StemWord>(
+    var jsonDataStorage = JsonDataStorage<StemWordData>(
         fileName: "StemWordsTest",
         extensionType: "json"
     )
     
     override func setUp() {
-        let stemWordTest = StemWord(
+        let stemWordTest = StemWordData(
             stemWord: "stemWordTest",
             occurrance: 3,
             inflectionalWords:["inflectionalWordTest"]
@@ -31,7 +31,7 @@ final class FarmersFridgeCodeChallengeJsonDataStorage: XCTestCase {
     
     func testJsonDataStorage_WhenWritingTestStemWord_ShouldCreateAReadableJsonFile() {
         /// Given
-        let stemWordTest = StemWord(
+        let stemWordTest = StemWordData(
             stemWord: "stemWordTest1",
             occurrance: 5,
             inflectionalWords:["inflectionalWordTest1", "inflectionalWordTest2"]
@@ -71,7 +71,7 @@ final class FarmersFridgeCodeChallengeJsonDataStorage: XCTestCase {
     
     func testJsonDataStorage_WhenUpdatingElement_JsonFileMustSaveUpdatedElement() {
         /// When
-        let stemWordTestUpdated = StemWord(
+        let stemWordTestUpdated = StemWordData(
             stemWord: "stemWordTest",
             occurrance: 1000,
             inflectionalWords:[String]()
@@ -94,7 +94,7 @@ final class FarmersFridgeCodeChallengeJsonDataStorage: XCTestCase {
     
     func testJsonDataStorage_WhenDeleteSingleElement_JsonFileMustBeEmpty() {
         /// Given
-        let stemWordToBeDeleted = StemWord(
+        let stemWordToBeDeleted = StemWordData(
             stemWord: "stemWordTest",
             occurrance: 0,
             inflectionalWords: [String]()

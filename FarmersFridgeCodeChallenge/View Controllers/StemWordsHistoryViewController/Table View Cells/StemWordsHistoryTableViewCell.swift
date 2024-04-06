@@ -21,7 +21,7 @@ class StemWordsHistoryTableViewCell: UITableViewCell {
     }
     
     // MARK: - Public API
-    func configure(with model: StemWord) {
+    func configure(with model: StemWordData) {
         
     }
 

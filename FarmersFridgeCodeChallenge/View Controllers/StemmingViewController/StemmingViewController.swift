@@ -21,8 +21,12 @@ class StemmingViewController: UIViewController {
     
     // MARK: - State variables
 
-    var stemWords = [StemWord]()
-    
+    var viewModel: StemmingViewModel = .init() {
+        didSet {
+            /// TODO Notify change to view <Observer>
+            updateView()
+        }
+    }
     
     // MARK: - View Life Cycle
 
@@ -43,16 +47,25 @@ class StemmingViewController: UIViewController {
     }
     */
     @IBAction func touchUpSteaStemButton(_ sender: UIButton) {
-        stem()
+        let words = inputTextView.text.split(separator: " ").map { String($0) }
+        viewModel.stem(words)
+    }
+}
+
+extension StemmingViewController {
+    private func  updateView() {
+//        tableView.refreshControl?.endRefreshing()
+
+        if viewModel.stemWordsData.isEmpty {
+            tableView.reloadData()
+        }
     }
 }
 
 // MARK: - Process input methods
 
 extension StemmingViewController {
-    func stem() {
-        
-    }
+
 }
 
 // MARK: - Table data source
@@ -63,7 +76,7 @@ extension StemmingViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return stemWords.count
+        return viewModel.numberOfSteamWords
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -73,9 +86,9 @@ extension StemmingViewController: UITableViewDataSource {
         ) as? StemmingTableViewCell else {
             fatalError("Unable to Dequeue Stemming Table View Cell")
         }
-        
+
         cell.configure(
-            with: stemWords[indexPath.row]
+            with: viewModel.viewModel(for: indexPath.row)
         )
 
         return cell

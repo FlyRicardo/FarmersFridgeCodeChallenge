@@ -18,6 +18,10 @@
 		2610DC4C2BBE10B300CAE40C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2610DC492BBE10B300CAE40C /* Main.storyboard */; };
 		265DA8772BC19B12000D2E8B /* FarmersFridgeCodeChallengeStemProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265DA8762BC19B12000D2E8B /* FarmersFridgeCodeChallengeStemProcessor.swift */; };
 		265DA8792BC19BC6000D2E8B /* Stemable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265DA8782BC19BC6000D2E8B /* Stemable.swift */; };
+		265DA87B2BC1D57E000D2E8B /* Updatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265DA87A2BC1D57E000D2E8B /* Updatable.swift */; };
+		265DA8802BC1E5B1000D2E8B /* StemmingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265DA87F2BC1E5B1000D2E8B /* StemmingViewModel.swift */; };
+		265DA8822BC1E6CF000D2E8B /* StemWordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265DA8812BC1E6CF000D2E8B /* StemWordViewModel.swift */; };
+		265DA8852BC1F4E4000D2E8B /* StemWordPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265DA8842BC1F4E4000D2E8B /* StemWordPresentable.swift */; };
 		2692D3602BC050BF00A62E16 /* JsonDataStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2692D35F2BC050BF00A62E16 /* JsonDataStorage.swift */; };
 		2692D3622BC0523700A62E16 /* Storable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2692D3612BC0523700A62E16 /* Storable.swift */; };
 		2692D3652BC0553D00A62E16 /* RepositoriesError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2692D3642BC0553D00A62E16 /* RepositoriesError.swift */; };
@@ -27,7 +31,7 @@
 		26D104CE2BBF1D81003BBAB8 /* StemWordsHistoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D104CD2BBF1D81003BBAB8 /* StemWordsHistoryTableViewController.swift */; };
 		26D104D02BBF1DD7003BBAB8 /* StemmingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D104CF2BBF1DD7003BBAB8 /* StemmingTableViewCell.swift */; };
 		26D104D22BBF1DF9003BBAB8 /* StemWordsHistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D104D12BBF1DF9003BBAB8 /* StemWordsHistoryTableViewCell.swift */; };
-		26D380B32BBF4CEE00A0A296 /* StemWord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D380B22BBF4CEE00A0A296 /* StemWord.swift */; };
+		26D380B32BBF4CEE00A0A296 /* StemWordData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D380B22BBF4CEE00A0A296 /* StemWordData.swift */; };
 		26D380B62BBF521D00A0A296 /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D380B52BBF521D00A0A296 /* ReusableView.swift */; };
 /* End PBXBuildFile section */
 
@@ -64,6 +68,10 @@
 		2610DC482BBE10B300CAE40C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		265DA8762BC19B12000D2E8B /* FarmersFridgeCodeChallengeStemProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FarmersFridgeCodeChallengeStemProcessor.swift; sourceTree = "<group>"; };
 		265DA8782BC19BC6000D2E8B /* Stemable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stemable.swift; sourceTree = "<group>"; };
+		265DA87A2BC1D57E000D2E8B /* Updatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Updatable.swift; sourceTree = "<group>"; };
+		265DA87F2BC1E5B1000D2E8B /* StemmingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StemmingViewModel.swift; sourceTree = "<group>"; };
+		265DA8812BC1E6CF000D2E8B /* StemWordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StemWordViewModel.swift; sourceTree = "<group>"; };
+		265DA8842BC1F4E4000D2E8B /* StemWordPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StemWordPresentable.swift; sourceTree = "<group>"; };
 		2692D35F2BC050BF00A62E16 /* JsonDataStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonDataStorage.swift; sourceTree = "<group>"; };
 		2692D3612BC0523700A62E16 /* Storable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storable.swift; sourceTree = "<group>"; };
 		2692D3642BC0553D00A62E16 /* RepositoriesError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesError.swift; sourceTree = "<group>"; };
@@ -73,7 +81,7 @@
 		26D104CD2BBF1D81003BBAB8 /* StemWordsHistoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StemWordsHistoryTableViewController.swift; sourceTree = "<group>"; };
 		26D104CF2BBF1DD7003BBAB8 /* StemmingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StemmingTableViewCell.swift; sourceTree = "<group>"; };
 		26D104D12BBF1DF9003BBAB8 /* StemWordsHistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StemWordsHistoryTableViewCell.swift; sourceTree = "<group>"; };
-		26D380B22BBF4CEE00A0A296 /* StemWord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StemWord.swift; sourceTree = "<group>"; };
+		26D380B22BBF4CEE00A0A296 /* StemWordData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StemWordData.swift; sourceTree = "<group>"; };
 		26D380B52BBF521D00A0A296 /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -182,6 +190,8 @@
 			isa = PBXGroup;
 			children = (
 				26D104C82BBF1BD5003BBAB8 /* StemmingViewController.swift */,
+				265DA8832BC1F4A8000D2E8B /* Protocols */,
+				265DA87C2BC1E4CD000D2E8B /* View Models */,
 				26D104C22BBF0421003BBAB8 /* Table View Cells */,
 			);
 			path = StemmingViewController;
@@ -194,6 +204,47 @@
 				26D104C32BBF0436003BBAB8 /* Table View Cells */,
 			);
 			path = StemWordsHistoryViewController;
+			sourceTree = "<group>";
+		};
+		265DA87C2BC1E4CD000D2E8B /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				265DA87F2BC1E5B1000D2E8B /* StemmingViewModel.swift */,
+				265DA8812BC1E6CF000D2E8B /* StemWordViewModel.swift */,
+			);
+			path = "View Models";
+			sourceTree = "<group>";
+		};
+		265DA87D2BC1E4F2000D2E8B /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				265DA8782BC19BC6000D2E8B /* Stemable.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		265DA87E2BC1E505000D2E8B /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				265DA87A2BC1D57E000D2E8B /* Updatable.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		265DA8832BC1F4A8000D2E8B /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				265DA8842BC1F4E4000D2E8B /* StemWordPresentable.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		265DA8862BC1F8EB000D2E8B /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				2692D3612BC0523700A62E16 /* Storable.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		2692D35B2BBF7F6200A62E16 /* Resources */ = {
@@ -223,6 +274,7 @@
 		2692D35E2BC0505300A62E16 /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
+				265DA87D2BC1E4F2000D2E8B /* Protocols */,
 				2692D36E2BC0DD9200A62E16 /* StemProcessor.swift */,
 			);
 			path = Repositories;
@@ -239,6 +291,7 @@
 		2692D36A2BC0C9DD00A62E16 /* Storage */ = {
 			isa = PBXGroup;
 			children = (
+				265DA8862BC1F8EB000D2E8B /* Protocols */,
 				2692D35F2BC050BF00A62E16 /* JsonDataStorage.swift */,
 			);
 			path = Storage;
@@ -263,7 +316,8 @@
 		26D104CC2BBF1D2D003BBAB8 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				26D380B22BBF4CEE00A0A296 /* StemWord.swift */,
+				265DA87E2BC1E505000D2E8B /* Protocols */,
+				26D380B22BBF4CEE00A0A296 /* StemWordData.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -271,9 +325,7 @@
 		26D380B42BBF51FC00A0A296 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				2692D3612BC0523700A62E16 /* Storable.swift */,
 				26D380B52BBF521D00A0A296 /* ReusableView.swift */,
-				265DA8782BC19BC6000D2E8B /* Stemable.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -411,6 +463,7 @@
 			files = (
 				2692D36F2BC0DD9200A62E16 /* StemProcessor.swift in Sources */,
 				26D380B62BBF521D00A0A296 /* ReusableView.swift in Sources */,
+				265DA8802BC1E5B1000D2E8B /* StemmingViewModel.swift in Sources */,
 				2610DC142BBE103100CAE40C /* AppDelegate.swift in Sources */,
 				2692D3622BC0523700A62E16 /* Storable.swift in Sources */,
 				26D104CE2BBF1D81003BBAB8 /* StemWordsHistoryTableViewController.swift in Sources */,
@@ -418,10 +471,13 @@
 				2610DC1E2BBE103100CAE40C /* FarmersFridgeCodeChallenge.xcdatamodeld in Sources */,
 				26D104D22BBF1DF9003BBAB8 /* StemWordsHistoryTableViewCell.swift in Sources */,
 				265DA8792BC19BC6000D2E8B /* Stemable.swift in Sources */,
+				265DA8822BC1E6CF000D2E8B /* StemWordViewModel.swift in Sources */,
 				26D104D02BBF1DD7003BBAB8 /* StemmingTableViewCell.swift in Sources */,
 				2692D3652BC0553D00A62E16 /* RepositoriesError.swift in Sources */,
 				26D104C92BBF1BD5003BBAB8 /* StemmingViewController.swift in Sources */,
-				26D380B32BBF4CEE00A0A296 /* StemWord.swift in Sources */,
+				265DA8852BC1F4E4000D2E8B /* StemWordPresentable.swift in Sources */,
+				265DA87B2BC1D57E000D2E8B /* Updatable.swift in Sources */,
+				26D380B32BBF4CEE00A0A296 /* StemWordData.swift in Sources */,
 				2610DC162BBE103100CAE40C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

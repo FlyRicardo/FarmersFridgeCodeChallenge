@@ -53,7 +53,7 @@
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="Stemming"/>
                                                 <connections>
-                                                    <action selector="touchUpStemButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nrS-en-0Nu"/>
+                                                    <action selector="touchUpSteaStemButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0yL-ah-e6p"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AgP-yd-joA">
@@ -153,7 +153,6 @@
                     <connections>
                         <outlet property="clearButton" destination="AgP-yd-joA" id="MAj-7x-vOS"/>
                         <outlet property="inputTextView" destination="93T-5F-Ro9" id="4Z6-nn-Fn7"/>
-                        <outlet property="stemmingButton" destination="TO1-tf-Ugx" id="7no-PM-9Lh"/>
                         <outlet property="tableView" destination="I8E-Mp-eiN" id="it2-Rx-Pia"/>
                     </connections>
                 </viewController>

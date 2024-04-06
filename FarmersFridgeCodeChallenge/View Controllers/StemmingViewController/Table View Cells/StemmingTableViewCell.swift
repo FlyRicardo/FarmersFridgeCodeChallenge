@@ -28,11 +28,11 @@ class StemmingTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func configure(with model: StemWord) {
-        stemWordLabel.text = model.stemWord
+    func configure(with presentable: StemWordPresentable) {
+        stemWordLabel.text = presentable.stemWord
         stemWordLabel.textColor = window?.tintColor
         
-        ocurranceLabel.text = String(model.occurrance)
+        ocurranceLabel.text = String(presentable.occurrance)
     }
 
 }

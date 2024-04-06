@@ -8,10 +8,9 @@
 import Foundation
 
 protocol Storable {
-    associatedtype T: Codable & Equatable
-    
-    func read() -> [T]?
-    func write(_ data: [T])
-    func delete(_ data: T)
+    func read() -> [StemWordData]?
+    func write(_ data: [StemWordData])
+    func update(_ data: StemWordData)
+    func delete(_ data: StemWordData)
     func deleteAll()
 }

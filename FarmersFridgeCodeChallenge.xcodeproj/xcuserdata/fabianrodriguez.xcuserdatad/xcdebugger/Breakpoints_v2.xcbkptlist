@@ -7,17 +7,79 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "84D78768-8EA0-4D8B-8926-2C6F9D7DAE9F"
+            uuid = "9CCFA1C2-3ABA-481E-9687-1185ED94DD86"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "FarmersFridgeCodeChallenge/Repositories/JsonDataRepository.swift"
+            filePath = "FarmersFridgeCodeChallenge/View Controllers/StemmingViewController/StemmingViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "68"
-            endingLineNumber = "68"
-            landmarkName = "save(_:)"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
+            landmarkName = "touchUpSteaStemButton(_:)"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "56AD507B-7BFC-4DD4-968C-375A71FD8ECA"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FarmersFridgeCodeChallenge/View Controllers/StemmingViewController/View Models/StemmingViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "70"
+            endingLineNumber = "70"
+            landmarkName = "stem(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "56AD507B-7BFC-4DD4-968C-375A71FD8ECA - 4758d9ff129c1cde"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FarmersFridgeCodeChallenge.StemmingViewModel.stem(Swift.Array&lt;Swift.String&gt;) -&gt; ()"
+                  moduleName = "FarmersFridgeCodeChallenge"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/fabianrodriguez/Documents/Courses/Interviews/n-ix%20Code%20Challenge/FarmersFridgeCodeChallenge/FarmersFridgeCodeChallenge/View%20Controllers/StemmingViewController/View%20Models/StemmingViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "70"
+                  endingLineNumber = "70">
+               </Location>
+               <Location
+                  uuid = "56AD507B-7BFC-4DD4-968C-375A71FD8ECA - ff3ada3cd3c25f32"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #4 (Swift.Array&lt;FarmersFridgeCodeChallenge.StemWordData&gt;) -&gt; Swift.Optional&lt;()&gt; in FarmersFridgeCodeChallenge.StemmingViewModel.stem(Swift.Array&lt;Swift.String&gt;) -&gt; ()"
+                  moduleName = "FarmersFridgeCodeChallenge"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/fabianrodriguez/Documents/Courses/Interviews/n-ix%20Code%20Challenge/FarmersFridgeCodeChallenge/FarmersFridgeCodeChallenge/View%20Controllers/StemmingViewController/View%20Models/StemmingViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "70"
+                  endingLineNumber = "70">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "EA0C434B-E798-404D-868B-3088B1EB1315"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FarmersFridgeCodeChallenge/View Controllers/StemmingViewController/StemmingViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "viewModel"
+            landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
