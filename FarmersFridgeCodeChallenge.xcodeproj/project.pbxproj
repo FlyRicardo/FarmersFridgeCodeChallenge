@@ -16,6 +16,10 @@
 		2610DC3A2BBE103400CAE40C /* FarmersFridgeCodeChallengeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2610DC392BBE103400CAE40C /* FarmersFridgeCodeChallengeUITestsLaunchTests.swift */; };
 		2610DC4B2BBE10B300CAE40C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2610DC472BBE10B300CAE40C /* LaunchScreen.storyboard */; };
 		2610DC4C2BBE10B300CAE40C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2610DC492BBE10B300CAE40C /* Main.storyboard */; };
+		2692D3602BC050BF00A62E16 /* JsonDataStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2692D35F2BC050BF00A62E16 /* JsonDataStorage.swift */; };
+		2692D3622BC0523700A62E16 /* Storable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2692D3612BC0523700A62E16 /* Storable.swift */; };
+		2692D3652BC0553D00A62E16 /* RepositoriesError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2692D3642BC0553D00A62E16 /* RepositoriesError.swift */; };
+		2692D36D2BC0D14400A62E16 /* FarmersFridgeCodeChallengeJsonDataStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2692D36B2BC0CB0400A62E16 /* FarmersFridgeCodeChallengeJsonDataStorage.swift */; };
 		26D104C92BBF1BD5003BBAB8 /* StemmingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D104C82BBF1BD5003BBAB8 /* StemmingViewController.swift */; };
 		26D104CE2BBF1D81003BBAB8 /* StemWordsHistoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D104CD2BBF1D81003BBAB8 /* StemWordsHistoryTableViewController.swift */; };
 		26D104D02BBF1DD7003BBAB8 /* StemmingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D104CF2BBF1DD7003BBAB8 /* StemmingTableViewCell.swift */; };
@@ -55,6 +59,10 @@
 		2610DC392BBE103400CAE40C /* FarmersFridgeCodeChallengeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FarmersFridgeCodeChallengeUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		2610DC462BBE10B300CAE40C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2610DC482BBE10B300CAE40C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2692D35F2BC050BF00A62E16 /* JsonDataStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonDataStorage.swift; sourceTree = "<group>"; };
+		2692D3612BC0523700A62E16 /* Storable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storable.swift; sourceTree = "<group>"; };
+		2692D3642BC0553D00A62E16 /* RepositoriesError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesError.swift; sourceTree = "<group>"; };
+		2692D36B2BC0CB0400A62E16 /* FarmersFridgeCodeChallengeJsonDataStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FarmersFridgeCodeChallengeJsonDataStorage.swift; sourceTree = "<group>"; };
 		26D104C82BBF1BD5003BBAB8 /* StemmingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StemmingViewController.swift; sourceTree = "<group>"; };
 		26D104CD2BBF1D81003BBAB8 /* StemWordsHistoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StemWordsHistoryTableViewController.swift; sourceTree = "<group>"; };
 		26D104CF2BBF1DD7003BBAB8 /* StemmingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StemmingTableViewCell.swift; sourceTree = "<group>"; };
@@ -111,13 +119,16 @@
 		2610DC122BBE103100CAE40C /* FarmersFridgeCodeChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				2692D35D2BBF7FAB00A62E16 /* Delegates */,
 				26D380B42BBF51FC00A0A296 /* Protocols */,
-				26D104CC2BBF1D2D003BBAB8 /* Models */,
 				2610DC542BBE399800CAE40C /* View Controllers */,
+				2692D35E2BC0505300A62E16 /* Repositories */,
+				26D104CC2BBF1D2D003BBAB8 /* Models */,
+				2692D36A2BC0C9DD00A62E16 /* Storage */,
+				2692D3632BC0551500A62E16 /* Error Hanlders */,
 				2610DC4A2BBE10B300CAE40C /* Storyboards */,
-				2610DC132BBE103100CAE40C /* AppDelegate.swift */,
-				2610DC152BBE103100CAE40C /* SceneDelegate.swift */,
-				2610DC1F2BBE103400CAE40C /* Assets.xcassets */,
+				2692D35B2BBF7F6200A62E16 /* Resources */,
+				2692D35C2BBF7F7C00A62E16 /* Supporting Files */,
 				2610DC242BBE103400CAE40C /* Info.plist */,
 				2610DC1C2BBE103100CAE40C /* FarmersFridgeCodeChallenge.xcdatamodeld */,
 			);
@@ -128,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				2610DC2D2BBE103400CAE40C /* FarmersFridgeCodeChallengeTests.swift */,
+				2692D36B2BC0CB0400A62E16 /* FarmersFridgeCodeChallengeJsonDataStorage.swift */,
 			);
 			path = FarmersFridgeCodeChallengeTests;
 			sourceTree = "<group>";
@@ -177,6 +189,53 @@
 			path = StemWordsHistoryViewController;
 			sourceTree = "<group>";
 		};
+		2692D35B2BBF7F6200A62E16 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2610DC1F2BBE103400CAE40C /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		2692D35C2BBF7F7C00A62E16 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2692D35D2BBF7FAB00A62E16 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				2610DC132BBE103100CAE40C /* AppDelegate.swift */,
+				2610DC152BBE103100CAE40C /* SceneDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		2692D35E2BC0505300A62E16 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		2692D3632BC0551500A62E16 /* Error Hanlders */ = {
+			isa = PBXGroup;
+			children = (
+				2692D3642BC0553D00A62E16 /* RepositoriesError.swift */,
+			);
+			path = "Error Hanlders";
+			sourceTree = "<group>";
+		};
+		2692D36A2BC0C9DD00A62E16 /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				2692D35F2BC050BF00A62E16 /* JsonDataStorage.swift */,
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
 		26D104C22BBF0421003BBAB8 /* Table View Cells */ = {
 			isa = PBXGroup;
 			children = (
@@ -204,6 +263,7 @@
 		26D380B42BBF51FC00A0A296 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				2692D3612BC0523700A62E16 /* Storable.swift */,
 				26D380B52BBF521D00A0A296 /* ReusableView.swift */,
 			);
 			path = Protocols;
@@ -342,10 +402,13 @@
 			files = (
 				26D380B62BBF521D00A0A296 /* ReusableView.swift in Sources */,
 				2610DC142BBE103100CAE40C /* AppDelegate.swift in Sources */,
+				2692D3622BC0523700A62E16 /* Storable.swift in Sources */,
 				26D104CE2BBF1D81003BBAB8 /* StemWordsHistoryTableViewController.swift in Sources */,
+				2692D3602BC050BF00A62E16 /* JsonDataStorage.swift in Sources */,
 				2610DC1E2BBE103100CAE40C /* FarmersFridgeCodeChallenge.xcdatamodeld in Sources */,
 				26D104D22BBF1DF9003BBAB8 /* StemWordsHistoryTableViewCell.swift in Sources */,
 				26D104D02BBF1DD7003BBAB8 /* StemmingTableViewCell.swift in Sources */,
+				2692D3652BC0553D00A62E16 /* RepositoriesError.swift in Sources */,
 				26D104C92BBF1BD5003BBAB8 /* StemmingViewController.swift in Sources */,
 				26D380B32BBF4CEE00A0A296 /* StemWord.swift in Sources */,
 				2610DC162BBE103100CAE40C /* SceneDelegate.swift in Sources */,
@@ -356,6 +419,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2692D36D2BC0D14400A62E16 /* FarmersFridgeCodeChallengeJsonDataStorage.swift in Sources */,
 				2610DC2E2BBE103400CAE40C /* FarmersFridgeCodeChallengeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

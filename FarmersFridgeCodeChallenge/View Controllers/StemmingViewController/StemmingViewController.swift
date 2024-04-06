@@ -42,7 +42,17 @@ class StemmingViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    @IBAction func touchUpStemButton(_ sender: UIButton) {
+        stem()
+    }
+}
 
+// MARK: - Process input methods
+
+extension StemmingViewController {
+    func stem() {
+        
+    }
 }
 
 // MARK: - Table data source
@@ -53,7 +63,7 @@ extension StemmingViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return stemWords.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -64,7 +74,9 @@ extension StemmingViewController: UITableViewDataSource {
             fatalError("Unable to Dequeue Stemming Table View Cell")
         }
         
-        cell.configure(with: StemWord(stemWord: "UZCUZLZVKDKE",ocurrance: "3"))
+        cell.configure(
+            with: stemWords[indexPath.row]
+        )
 
         return cell
     }

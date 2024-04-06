@@ -32,7 +32,7 @@ class StemmingTableViewCell: UITableViewCell {
         stemWordLabel.text = model.stemWord
         stemWordLabel.textColor = window?.tintColor
         
-        ocurranceLabel.text = model.ocurrance
+        ocurranceLabel.text = String(model.occurrance)
     }
 
 }
