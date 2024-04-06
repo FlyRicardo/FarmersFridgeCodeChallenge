@@ -42,7 +42,7 @@ class StemmingViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-    @IBAction func touchUpStemButton(_ sender: UIButton) {
+    @IBAction func touchUpSteaStemButton(_ sender: UIButton) {
         stem()
     }
 }
