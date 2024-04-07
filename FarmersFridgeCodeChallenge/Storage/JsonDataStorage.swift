@@ -42,10 +42,12 @@ struct JsonDataStorage: Storable {
     }
     
      func write(_ data: [StemWordData]) {
-        guard var storedData = read() else {
-            save(data)
-            return
-        }
+         guard
+            var storedData = read()
+         else {
+             save(data)
+             return
+         }
         
         data.forEach { item in
             if let index = storedData.firstIndex(where:{ $0.id == item.id }) {

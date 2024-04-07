@@ -12,7 +12,8 @@ class StemmingTableViewCell: UITableViewCell {
     // MARK: - Properties
     
     @IBOutlet weak var stemWordLabel: UILabel!
-    @IBOutlet weak var ocurranceLabel: UILabel!
+    @IBOutlet weak var occurranceLabel: UILabel!
+    
     // MARK: - Initialization
 
     override func awakeFromNib() {
@@ -32,7 +33,7 @@ class StemmingTableViewCell: UITableViewCell {
         stemWordLabel.text = presentable.stemWord
         stemWordLabel.textColor = window?.tintColor
         
-        ocurranceLabel.text = String(presentable.occurrance)
+        occurranceLabel.text = String(presentable.occurrance)
     }
 
 }

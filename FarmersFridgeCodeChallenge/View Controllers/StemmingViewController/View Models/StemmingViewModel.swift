@@ -10,30 +10,35 @@ import Foundation
 final class StemmingViewModel {
     // MARK: - Dependencies
     private let dataStorage: Storable
+    var onListDidChange: (() -> Void)? = nil
     
     // MARK: - Properties
-    
-    var stemWordsData: [StemWordData]
-    
-    // MARK: - Public API
-    var numberOfSections: Int {
-        1
-    }
-
-    var numberOfSteamWords: Int {
-        stemWordsData.count
+    var stemWordsData: [StemWordData]? {
+        didSet {
+            onListDidChange?()
+        }
     }
     
-    init(dataStorage: Storable = JsonDataStorage()) {
+    init(
+        dataStorage: Storable = JsonDataStorage(),
+        stemWordsData: StemWordData? = nil
+    ) {
         self.dataStorage = dataStorage
         self.stemWordsData = [StemWordData]()
     }
     
-    func viewModel(for index: Int) -> StemWordViewModel {
-        StemWordViewModel(stemWordData: stemWordsData[index])
+    func viewModel(for index: Int) -> StemWordViewModel? {
+        guard
+            let sStemWordsData = stemWordsData
+        else {
+            return nil
+        }
+
+        return StemWordViewModel(stemWordData: sStemWordsData[index])
     }
     
-    func stem(_ words: [String]) {
+    func stem(_ string: String) {
+        let words = string.split(separator: " ").map { String($0) }
         let stemProcessor: Stemable = StemProcessor()
         
         let inputsStemWords = words.map {

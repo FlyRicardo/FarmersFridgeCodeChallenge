@@ -7,12 +7,13 @@
 
 import UIKit
 
+// fui a recoger a mi esposa, no me tardo. dejo abierta la llamada.
+
 class StemmingViewController: UIViewController {
     
     // MARK: - Input UI elements
 
     @IBOutlet weak var inputTextView: UITextView!
-    @IBOutlet weak var stemmingButton: UIButton!
     @IBOutlet weak var clearButton: UIButton!
     
     // MARK: - Output UI elements
@@ -20,22 +21,15 @@ class StemmingViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     // MARK: - State variables
-
-    var viewModel: StemmingViewModel = .init() {
-        didSet {
-            /// TODO Notify change to view <Observer>
-            updateView()
-        }
-    }
+    
+    fileprivate var viewModel = StemmingViewModel()
     
     // MARK: - View Life Cycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        configureBinding()
     }
-    
 
     /*
     // MARK: - Navigation
@@ -47,25 +41,23 @@ class StemmingViewController: UIViewController {
     }
     */
     @IBAction func touchUpSteaStemButton(_ sender: UIButton) {
-        let words = inputTextView.text.split(separator: " ").map { String($0) }
-        viewModel.stem(words)
-    }
-}
-
-extension StemmingViewController {
-    private func  updateView() {
-//        tableView.refreshControl?.endRefreshing()
-
-        if viewModel.stemWordsData.isEmpty {
-            tableView.reloadData()
+        if let inputString = inputTextView.text { 
+            viewModel.stem(inputString)
         }
     }
+    
+    @IBAction func touchUpClearButton(_ sender: UIButton) {
+        inputTextView.text = ""
+    }
+    
 }
 
-// MARK: - Process input methods
-
-extension StemmingViewController {
-
+private extension StemmingViewController {
+    func configureBinding() {
+        viewModel.onListDidChange = {[weak self] in
+            self?.tableView.reloadData()
+        }
+    }
 }
 
 // MARK: - Table data source
@@ -76,20 +68,22 @@ extension StemmingViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.numberOfSteamWords
+        return viewModel.stemWordsData?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(
-            withIdentifier: StemmingTableViewCell.reuseIdentifier,
-            for: indexPath
-        ) as? StemmingTableViewCell else {
+        guard
+            let cell = tableView.dequeueReusableCell(
+                withIdentifier: StemmingTableViewCell.reuseIdentifier,
+                for: indexPath
+            ) as? StemmingTableViewCell
+        else {
             fatalError("Unable to Dequeue Stemming Table View Cell")
         }
 
-        cell.configure(
-            with: viewModel.viewModel(for: indexPath.row)
-        )
+        if let viewModel = viewModel.viewModel(for: indexPath.row) {
+            cell.configure(with: viewModel)
+        }
 
         return cell
     }

@@ -9,26 +9,24 @@ import UIKit
 
 class StemWordsHistoryTableViewController: UITableViewController {
 
+    // MARK: - State variables
+    fileprivate var viewModel = StemWordHistoryViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        configureBinding()
+        viewModel.loadstemWordHistory()
     }
+    
 
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        return viewModel.stemWordsData?.count ?? 0
     }
 
     
@@ -39,6 +37,10 @@ class StemWordsHistoryTableViewController: UITableViewController {
         ) as? StemWordsHistoryTableViewCell else
         {
             fatalError("Unable to Dequeue Stemming Table View Cell")
+        }
+        
+        if let viewModel = viewModel.viewModel(for: indexPath.row) {
+            cell.configure(with: viewModel)
         }
         
         return cell
@@ -90,4 +92,12 @@ class StemWordsHistoryTableViewController: UITableViewController {
     }
     */
 
+}
+
+private extension StemWordsHistoryTableViewController {
+    func configureBinding() {
+        viewModel.onListDidChange = {[weak self] in
+            self?.tableView.reloadData()
+        }
+    }
 }

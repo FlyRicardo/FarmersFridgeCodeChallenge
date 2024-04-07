@@ -8,7 +8,14 @@
 import UIKit
 
 class StemWordsHistoryTableViewCell: UITableViewCell {
+    
+    // MARK: - Properties
 
+    @IBOutlet weak var stemWordLabel: UILabel!
+    @IBOutlet weak var occurranceLabel: UILabel!
+    
+    // MARK: - Initialization
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -21,8 +28,12 @@ class StemWordsHistoryTableViewCell: UITableViewCell {
     }
     
     // MARK: - Public API
-    func configure(with model: StemWordData) {
+    func configure(with presentable: StemWordPresentable) {
+        stemWordLabel.text = presentable.stemWord
+        stemWordLabel.textColor = window?.tintColor
         
+        occurranceLabel.text = String(presentable.occurrance)
     }
+
 
 }
