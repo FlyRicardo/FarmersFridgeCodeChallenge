@@ -127,7 +127,7 @@
                                                     </constraints>
                                                 </tableViewCellContentView>
                                                 <connections>
-                                                    <outlet property="ocurranceLabel" destination="E2e-7H-O4U" id="13L-xQ-8cG"/>
+                                                    <outlet property="occurranceLabel" destination="E2e-7H-O4U" id="KFx-hs-sMy"/>
                                                     <outlet property="stemWordLabel" destination="3Eq-qt-Usn" id="HRF-lP-xEh"/>
                                                 </connections>
                                             </tableViewCell>

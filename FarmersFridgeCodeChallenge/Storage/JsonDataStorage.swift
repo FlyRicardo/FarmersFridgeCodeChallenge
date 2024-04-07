@@ -43,22 +43,22 @@ struct JsonDataStorage: Storable {
     
      func write(_ data: [StemWordData]) {
          guard
-            var storedData = read()
+            let storedData = read()
          else {
              save(data)
              return
          }
         
         data.forEach { item in
-            if let index = storedData.firstIndex(where:{ $0.id == item.id }) {
-                storedData[index] = item
+            if let _ = storedData.firstIndex(where:{ $0.id == item.id }) { /// If Item is save, then updated
+                update(item)
             }
             else {
+                guard var storedData = read() else { return }  /// Get data after posible update
                 storedData.append(item)
+                save(storedData) /// If Item doesnt's exist, insert in the persisted collection 
             }
         }
-        
-        save(storedData)
     }
     
      func delete(_ data: StemWordData) {
