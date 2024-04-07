@@ -12,6 +12,11 @@ class StemWordsHistoryTableViewController: UITableViewController {
     // MARK: - State variables
     fileprivate var viewModel = StemWordHistoryViewModel()
     
+    
+    @IBAction func ClearHistoryCountAction(_ sender: UIButton) {
+        viewModel.clearHistory()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureBinding()

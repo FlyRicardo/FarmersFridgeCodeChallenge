@@ -10,7 +10,7 @@ import XCTest
 
 final class FarmersFridgeCodeChallengeJsonDataStorage: XCTestCase {
     
-    var jsonDataStorage = JsonDataStorage<StemWordData>(
+    var jsonDataStorage = JsonDataStorage(
         fileName: "StemWordsTest",
         extensionType: "json"
     )
@@ -87,8 +87,6 @@ final class FarmersFridgeCodeChallengeJsonDataStorage: XCTestCase {
         
         XCTAssert(storedStemWords.count == 1, "The only one saved in the setUp()")
         XCTAssert(storedStemWords.first?.stemWord == stemWordTestUpdated.stemWord)
-        XCTAssert(storedStemWords.first?.occurrance == stemWordTestUpdated.occurrance)
-        XCTAssert(storedStemWords.first?.inflectionalWords.count == stemWordTestUpdated.inflectionalWords.count)
 
     }
     

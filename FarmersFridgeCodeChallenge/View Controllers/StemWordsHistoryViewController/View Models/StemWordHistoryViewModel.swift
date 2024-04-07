@@ -40,4 +40,10 @@ class StemWordHistoryViewModel {
     func loadstemWordHistory() {
         dataStorage.read().flatMap { self.stemWordsData = $0 }
     }
+    
+    func clearHistory() {
+        dataStorage.deleteAll()
+        
+        dataStorage.read().flatMap { self.stemWordsData = $0 }
+    }
 }

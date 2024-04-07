@@ -171,9 +171,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="9tO-aV-NWI">
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cSS-8G-WIa">
+                                    <rect key="frame" x="252.66666666666666" y="8.6666666666666679" width="120.33333333333334" height="34.333333333333329"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="filled" title="Clear history"/>
+                                    <connections>
+                                        <action selector="ClearHistoryCountAction:" destination="9hD-3h-rhH" eventType="touchUpInside" id="asf-hD-3BG"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstItem="cSS-8G-WIa" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="9tO-aV-NWI" secondAttribute="leading" constant="20" symbolic="YES" id="Kd5-Xu-oVe"/>
+                                <constraint firstItem="cSS-8G-WIa" firstAttribute="top" secondItem="9tO-aV-NWI" secondAttribute="top" constant="8.6666666666666679" id="UEH-0x-Zqr"/>
+                                <constraint firstAttribute="bottom" secondItem="cSS-8G-WIa" secondAttribute="bottom" constant="1" id="gHV-1L-kAi"/>
+                                <constraint firstAttribute="trailing" secondItem="cSS-8G-WIa" secondAttribute="trailing" constant="20" id="sFM-ym-xUH"/>
+                            </constraints>
+                        </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="StemWordsHistoryTableViewCell" id="yy1-uN-YRK" userLabel="SteamWordsHistoryTableViewCell" customClass="StemWordsHistoryTableViewCell" customModule="FarmersFridgeCodeChallenge" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="50" width="393" height="57.333332061767578"/>
+                                <rect key="frame" x="0.0" y="94" width="393" height="57.333332061767578"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yy1-uN-YRK" id="KgA-22-RU3">
                                     <rect key="frame" x="0.0" y="0.0" width="393" height="57.333332061767578"/>

@@ -52,6 +52,10 @@ final class StemmingViewModel {
         dataStorage.write(inputStemWords)
         refreshInputSteamWords(inputStemWords)
     }
+    
+    func clearHistory() {
+        stemWordsData = nil
+    }
 }
 
 private extension StemmingViewModel {

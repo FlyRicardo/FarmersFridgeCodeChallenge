@@ -48,6 +48,7 @@ class StemmingViewController: UIViewController {
     
     @IBAction func touchUpClearButton(_ sender: UIButton) {
         inputTextView.text = ""
+        viewModel.clearHistory()
     }
     
 }
