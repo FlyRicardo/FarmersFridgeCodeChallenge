@@ -20,13 +20,16 @@
 		265DA8792BC19BC6000D2E8B /* Stemable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265DA8782BC19BC6000D2E8B /* Stemable.swift */; };
 		265DA87B2BC1D57E000D2E8B /* Updatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265DA87A2BC1D57E000D2E8B /* Updatable.swift */; };
 		265DA8802BC1E5B1000D2E8B /* StemmingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265DA87F2BC1E5B1000D2E8B /* StemmingViewModel.swift */; };
-		265DA8822BC1E6CF000D2E8B /* StemWordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265DA8812BC1E6CF000D2E8B /* StemWordViewModel.swift */; };
+		265DA8822BC1E6CF000D2E8B /* StemWordCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265DA8812BC1E6CF000D2E8B /* StemWordCellViewModel.swift */; };
 		265DA8852BC1F4E4000D2E8B /* StemWordPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265DA8842BC1F4E4000D2E8B /* StemWordPresentable.swift */; };
 		265DA8892BC24ECC000D2E8B /* StemWordHistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265DA8882BC24ECC000D2E8B /* StemWordHistoryViewModel.swift */; };
+		266003112BC46E330003A9FF /* StemWordHistoryViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2660030D2BC46E320003A9FF /* StemWordHistoryViewModelTest.swift */; };
+		266003122BC46E330003A9FF /* StemmingViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2660030E2BC46E320003A9FF /* StemmingViewModelTest.swift */; };
+		266003132BC46E330003A9FF /* DataStorageMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2660030F2BC46E330003A9FF /* DataStorageMock.swift */; };
 		2692D3602BC050BF00A62E16 /* JsonDataStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2692D35F2BC050BF00A62E16 /* JsonDataStorage.swift */; };
 		2692D3622BC0523700A62E16 /* Storable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2692D3612BC0523700A62E16 /* Storable.swift */; };
 		2692D3652BC0553D00A62E16 /* RepositoriesError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2692D3642BC0553D00A62E16 /* RepositoriesError.swift */; };
-		2692D36D2BC0D14400A62E16 /* FarmersFridgeCodeChallengeJsonDataStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2692D36B2BC0CB0400A62E16 /* FarmersFridgeCodeChallengeJsonDataStorage.swift */; };
+		2692D36D2BC0D14400A62E16 /* JsonDataStorageTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2692D36B2BC0CB0400A62E16 /* JsonDataStorageTest.swift */; };
 		2692D36F2BC0DD9200A62E16 /* StemProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2692D36E2BC0DD9200A62E16 /* StemProcessor.swift */; };
 		26D104C92BBF1BD5003BBAB8 /* StemmingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D104C82BBF1BD5003BBAB8 /* StemmingViewController.swift */; };
 		26D104CE2BBF1D81003BBAB8 /* StemWordsHistoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D104CD2BBF1D81003BBAB8 /* StemWordsHistoryTableViewController.swift */; };
@@ -71,13 +74,16 @@
 		265DA8782BC19BC6000D2E8B /* Stemable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stemable.swift; sourceTree = "<group>"; };
 		265DA87A2BC1D57E000D2E8B /* Updatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Updatable.swift; sourceTree = "<group>"; };
 		265DA87F2BC1E5B1000D2E8B /* StemmingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StemmingViewModel.swift; sourceTree = "<group>"; };
-		265DA8812BC1E6CF000D2E8B /* StemWordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StemWordViewModel.swift; sourceTree = "<group>"; };
+		265DA8812BC1E6CF000D2E8B /* StemWordCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StemWordCellViewModel.swift; sourceTree = "<group>"; };
 		265DA8842BC1F4E4000D2E8B /* StemWordPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StemWordPresentable.swift; sourceTree = "<group>"; };
 		265DA8882BC24ECC000D2E8B /* StemWordHistoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StemWordHistoryViewModel.swift; sourceTree = "<group>"; };
+		2660030D2BC46E320003A9FF /* StemWordHistoryViewModelTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StemWordHistoryViewModelTest.swift; sourceTree = "<group>"; };
+		2660030E2BC46E320003A9FF /* StemmingViewModelTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StemmingViewModelTest.swift; sourceTree = "<group>"; };
+		2660030F2BC46E330003A9FF /* DataStorageMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataStorageMock.swift; sourceTree = "<group>"; };
 		2692D35F2BC050BF00A62E16 /* JsonDataStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonDataStorage.swift; sourceTree = "<group>"; };
 		2692D3612BC0523700A62E16 /* Storable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storable.swift; sourceTree = "<group>"; };
 		2692D3642BC0553D00A62E16 /* RepositoriesError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesError.swift; sourceTree = "<group>"; };
-		2692D36B2BC0CB0400A62E16 /* FarmersFridgeCodeChallengeJsonDataStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FarmersFridgeCodeChallengeJsonDataStorage.swift; sourceTree = "<group>"; };
+		2692D36B2BC0CB0400A62E16 /* JsonDataStorageTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonDataStorageTest.swift; sourceTree = "<group>"; };
 		2692D36E2BC0DD9200A62E16 /* StemProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StemProcessor.swift; sourceTree = "<group>"; };
 		26D104C82BBF1BD5003BBAB8 /* StemmingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StemmingViewController.swift; sourceTree = "<group>"; };
 		26D104CD2BBF1D81003BBAB8 /* StemWordsHistoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StemWordsHistoryTableViewController.swift; sourceTree = "<group>"; };
@@ -154,8 +160,11 @@
 		2610DC2C2BBE103400CAE40C /* FarmersFridgeCodeChallengeTests */ = {
 			isa = PBXGroup;
 			children = (
+				266003102BC46E330003A9FF /* Mocks */,
+				2660030E2BC46E320003A9FF /* StemmingViewModelTest.swift */,
+				2660030D2BC46E320003A9FF /* StemWordHistoryViewModelTest.swift */,
 				2610DC2D2BBE103400CAE40C /* FarmersFridgeCodeChallengeTests.swift */,
-				2692D36B2BC0CB0400A62E16 /* FarmersFridgeCodeChallengeJsonDataStorage.swift */,
+				2692D36B2BC0CB0400A62E16 /* JsonDataStorageTest.swift */,
 				265DA8762BC19B12000D2E8B /* FarmersFridgeCodeChallengeStemProcessor.swift */,
 			);
 			path = FarmersFridgeCodeChallengeTests;
@@ -213,7 +222,7 @@
 			isa = PBXGroup;
 			children = (
 				265DA87F2BC1E5B1000D2E8B /* StemmingViewModel.swift */,
-				265DA8812BC1E6CF000D2E8B /* StemWordViewModel.swift */,
+				265DA8812BC1E6CF000D2E8B /* StemWordCellViewModel.swift */,
 			);
 			path = "View Models";
 			sourceTree = "<group>";
@@ -256,6 +265,14 @@
 				265DA8882BC24ECC000D2E8B /* StemWordHistoryViewModel.swift */,
 			);
 			path = "View Models";
+			sourceTree = "<group>";
+		};
+		266003102BC46E330003A9FF /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				2660030F2BC46E330003A9FF /* DataStorageMock.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 		2692D35B2BBF7F6200A62E16 /* Resources */ = {
@@ -482,7 +499,7 @@
 				2610DC1E2BBE103100CAE40C /* FarmersFridgeCodeChallenge.xcdatamodeld in Sources */,
 				26D104D22BBF1DF9003BBAB8 /* StemWordsHistoryTableViewCell.swift in Sources */,
 				265DA8792BC19BC6000D2E8B /* Stemable.swift in Sources */,
-				265DA8822BC1E6CF000D2E8B /* StemWordViewModel.swift in Sources */,
+				265DA8822BC1E6CF000D2E8B /* StemWordCellViewModel.swift in Sources */,
 				26D104D02BBF1DD7003BBAB8 /* StemmingTableViewCell.swift in Sources */,
 				265DA8892BC24ECC000D2E8B /* StemWordHistoryViewModel.swift in Sources */,
 				2692D3652BC0553D00A62E16 /* RepositoriesError.swift in Sources */,
@@ -498,9 +515,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2692D36D2BC0D14400A62E16 /* FarmersFridgeCodeChallengeJsonDataStorage.swift in Sources */,
+				266003112BC46E330003A9FF /* StemWordHistoryViewModelTest.swift in Sources */,
+				2692D36D2BC0D14400A62E16 /* JsonDataStorageTest.swift in Sources */,
 				265DA8772BC19B12000D2E8B /* FarmersFridgeCodeChallengeStemProcessor.swift in Sources */,
+				266003122BC46E330003A9FF /* StemmingViewModelTest.swift in Sources */,
 				2610DC2E2BBE103400CAE40C /* FarmersFridgeCodeChallengeTests.swift in Sources */,
+				266003132BC46E330003A9FF /* DataStorageMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -23,7 +23,7 @@ class StemWordsHistoryTableViewController: UITableViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        viewModel.loadstemWordHistory()
+        viewModel.loadStemWordHistory()
     }
 
     // MARK: - Table view data source
@@ -46,7 +46,7 @@ class StemWordsHistoryTableViewController: UITableViewController {
             fatalError("Unable to Dequeue Stemming Table View Cell")
         }
         
-        if let viewModel = viewModel.viewModel(for: indexPath.row) {
+        if let viewModel = viewModel.cellViewModel(for: indexPath.row) {
             cell.configure(with: viewModel)
         }
         

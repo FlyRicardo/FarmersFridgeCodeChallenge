@@ -8,7 +8,7 @@
 import XCTest
 @testable import FarmersFridgeCodeChallenge
 
-final class FarmersFridgeCodeChallengeJsonDataStorage: XCTestCase {
+final class JsonDataStorageTest: XCTestCase {
     
     var jsonDataStorage = JsonDataStorage(
         fileName: "StemWordsTest",

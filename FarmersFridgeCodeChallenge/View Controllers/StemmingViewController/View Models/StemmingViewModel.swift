@@ -10,6 +10,7 @@ import Foundation
 final class StemmingViewModel {
     // MARK: - Dependencies
     private let dataStorage: Storable
+    private let stemProcessor: Stemable
     var onListDidChange: (() -> Void)? = nil
     
     // MARK: - Properties
@@ -21,25 +22,29 @@ final class StemmingViewModel {
     
     init(
         dataStorage: Storable = JsonDataStorage(),
-        stemWordsData: StemWordData? = nil
+        stemWordsData: StemWordData? = nil,
+        stemProcessor: Stemable = StemProcessor()
     ) {
         self.dataStorage = dataStorage
         self.stemWordsData = [StemWordData]()
+        self.stemProcessor = stemProcessor
     }
     
-    func viewModel(for index: Int) -> StemWordViewModel? {
+    func cellViewModel(for index: Int) -> StemWordCellViewModel? {
         guard
-            let sStemWordsData = stemWordsData
+            let sStemWordsData = stemWordsData,
+            !sStemWordsData.isEmpty
         else {
             return nil
         }
 
-        return StemWordViewModel(stemWordData: sStemWordsData[index])
+        return StemWordCellViewModel(stemWordData: sStemWordsData[index])
     }
     
     func stem(_ string: String) {
+        if string.isEmpty { return }
+        
         let words = string.split(separator: " ").map { String($0) }
-        let stemProcessor: Stemable = StemProcessor()
         
         let inputStemWords = words.map {
             StemWordData(
@@ -53,7 +58,7 @@ final class StemmingViewModel {
         refreshInputSteamWords(inputStemWords)
     }
     
-    func clearHistory() {
+    func clearStemWords() {
         stemWordsData = nil
     }
 }

@@ -27,17 +27,18 @@ class StemWordHistoryViewModel {
         self.stemWordsData = [StemWordData]()
     }
     
-    func viewModel(for index: Int) -> StemWordViewModel? {
+    func cellViewModel(for index: Int) -> StemWordCellViewModel? {
         guard
-            let sStemWordsData = stemWordsData
+            let sStemWordsData = stemWordsData,
+            !sStemWordsData.isEmpty
         else {
             return nil
         }
 
-        return StemWordViewModel(stemWordData: sStemWordsData[index])
+        return StemWordCellViewModel(stemWordData: sStemWordsData[index])
     }
     
-    func loadstemWordHistory() {
+    func loadStemWordHistory() {
         dataStorage.read().flatMap { self.stemWordsData = $0 }
     }
     

@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct StemWordViewModel {
+struct StemWordCellViewModel {
     // MARK: - Properties
     let stemWordData: StemWordData
     
@@ -26,6 +26,6 @@ struct StemWordViewModel {
     
 }
 
-extension StemWordViewModel: StemWordPresentable {
+extension StemWordCellViewModel: StemWordPresentable {
     
 }

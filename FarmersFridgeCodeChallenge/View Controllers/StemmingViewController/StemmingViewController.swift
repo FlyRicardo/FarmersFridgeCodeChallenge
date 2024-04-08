@@ -48,7 +48,7 @@ class StemmingViewController: UIViewController {
     
     @IBAction func touchUpClearButton(_ sender: UIButton) {
         inputTextView.text = ""
-        viewModel.clearHistory()
+        viewModel.clearStemWords()
     }
     
 }
@@ -82,7 +82,7 @@ extension StemmingViewController: UITableViewDataSource {
             fatalError("Unable to Dequeue Stemming Table View Cell")
         }
 
-        if let viewModel = viewModel.viewModel(for: indexPath.row) {
+        if let viewModel = viewModel.cellViewModel(for: indexPath.row) {
             cell.configure(with: viewModel)
         }
 

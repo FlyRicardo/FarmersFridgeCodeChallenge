@@ -1,0 +1,473 @@
+diff --git a/FarmersFridgeCodeChallenge.xcodeproj/project.pbxproj b/FarmersFridgeCodeChallenge.xcodeproj/project.pbxproj
+index f935f15..a7e6d08 100644
+--- a/FarmersFridgeCodeChallenge.xcodeproj/project.pbxproj
++++ b/FarmersFridgeCodeChallenge.xcodeproj/project.pbxproj
+@@ -16,17 +16,20 @@
+ 		2610DC3A2BBE103400CAE40C /* FarmersFridgeCodeChallengeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2610DC392BBE103400CAE40C /* FarmersFridgeCodeChallengeUITestsLaunchTests.swift */; };
+ 		2610DC4B2BBE10B300CAE40C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2610DC472BBE10B300CAE40C /* LaunchScreen.storyboard */; };
+ 		2610DC4C2BBE10B300CAE40C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2610DC492BBE10B300CAE40C /* Main.storyboard */; };
+-		265DA8772BC19B12000D2E8B /* FarmersFridgeCodeChallengeStemProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265DA8762BC19B12000D2E8B /* FarmersFridgeCodeChallengeStemProcessor.swift */; };
++		265DA8772BC19B12000D2E8B /* StemProcessorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265DA8762BC19B12000D2E8B /* StemProcessorTest.swift */; };
+ 		265DA8792BC19BC6000D2E8B /* Stemable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265DA8782BC19BC6000D2E8B /* Stemable.swift */; };
+ 		265DA87B2BC1D57E000D2E8B /* Updatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265DA87A2BC1D57E000D2E8B /* Updatable.swift */; };
+ 		265DA8802BC1E5B1000D2E8B /* StemmingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265DA87F2BC1E5B1000D2E8B /* StemmingViewModel.swift */; };
+-		265DA8822BC1E6CF000D2E8B /* StemWordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265DA8812BC1E6CF000D2E8B /* StemWordViewModel.swift */; };
++		265DA8822BC1E6CF000D2E8B /* StemWordViewCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265DA8812BC1E6CF000D2E8B /* StemWordViewCellModel.swift */; };
+ 		265DA8852BC1F4E4000D2E8B /* StemWordPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265DA8842BC1F4E4000D2E8B /* StemWordPresentable.swift */; };
+ 		265DA8892BC24ECC000D2E8B /* StemWordHistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265DA8882BC24ECC000D2E8B /* StemWordHistoryViewModel.swift */; };
++		268121A32BC453F400C0E425 /* StemmingViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268121A22BC453F400C0E425 /* StemmingViewModelTest.swift */; };
++		268121A62BC4552E00C0E425 /* DataStorageMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268121A52BC4552E00C0E425 /* DataStorageMock.swift */; };
++		268121A82BC4699F00C0E425 /* StemWordHistoryViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268121A72BC4699F00C0E425 /* StemWordHistoryViewModelTest.swift */; };
+ 		2692D3602BC050BF00A62E16 /* JsonDataStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2692D35F2BC050BF00A62E16 /* JsonDataStorage.swift */; };
+ 		2692D3622BC0523700A62E16 /* Storable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2692D3612BC0523700A62E16 /* Storable.swift */; };
+ 		2692D3652BC0553D00A62E16 /* RepositoriesError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2692D3642BC0553D00A62E16 /* RepositoriesError.swift */; };
+-		2692D36D2BC0D14400A62E16 /* FarmersFridgeCodeChallengeJsonDataStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2692D36B2BC0CB0400A62E16 /* FarmersFridgeCodeChallengeJsonDataStorage.swift */; };
++		2692D36D2BC0D14400A62E16 /* JsonDataStorageTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2692D36B2BC0CB0400A62E16 /* JsonDataStorageTest.swift */; };
+ 		2692D36F2BC0DD9200A62E16 /* StemProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2692D36E2BC0DD9200A62E16 /* StemProcessor.swift */; };
+ 		26D104C92BBF1BD5003BBAB8 /* StemmingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D104C82BBF1BD5003BBAB8 /* StemmingViewController.swift */; };
+ 		26D104CE2BBF1D81003BBAB8 /* StemWordsHistoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D104CD2BBF1D81003BBAB8 /* StemWordsHistoryTableViewController.swift */; };
+@@ -67,17 +70,20 @@
+ 		2610DC392BBE103400CAE40C /* FarmersFridgeCodeChallengeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FarmersFridgeCodeChallengeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+ 		2610DC462BBE10B300CAE40C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+ 		2610DC482BBE10B300CAE40C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+-		265DA8762BC19B12000D2E8B /* FarmersFridgeCodeChallengeStemProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FarmersFridgeCodeChallengeStemProcessor.swift; sourceTree = "<group>"; };
++		265DA8762BC19B12000D2E8B /* StemProcessorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StemProcessorTest.swift; sourceTree = "<group>"; };
+ 		265DA8782BC19BC6000D2E8B /* Stemable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stemable.swift; sourceTree = "<group>"; };
+ 		265DA87A2BC1D57E000D2E8B /* Updatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Updatable.swift; sourceTree = "<group>"; };
+ 		265DA87F2BC1E5B1000D2E8B /* StemmingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StemmingViewModel.swift; sourceTree = "<group>"; };
+-		265DA8812BC1E6CF000D2E8B /* StemWordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StemWordViewModel.swift; sourceTree = "<group>"; };
++		265DA8812BC1E6CF000D2E8B /* StemWordViewCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StemWordViewCellModel.swift; sourceTree = "<group>"; };
+ 		265DA8842BC1F4E4000D2E8B /* StemWordPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StemWordPresentable.swift; sourceTree = "<group>"; };
+ 		265DA8882BC24ECC000D2E8B /* StemWordHistoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StemWordHistoryViewModel.swift; sourceTree = "<group>"; };
++		268121A22BC453F400C0E425 /* StemmingViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StemmingViewModelTest.swift; sourceTree = "<group>"; };
++		268121A52BC4552E00C0E425 /* DataStorageMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStorageMock.swift; sourceTree = "<group>"; };
++		268121A72BC4699F00C0E425 /* StemWordHistoryViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StemWordHistoryViewModelTest.swift; sourceTree = "<group>"; };
+ 		2692D35F2BC050BF00A62E16 /* JsonDataStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonDataStorage.swift; sourceTree = "<group>"; };
+ 		2692D3612BC0523700A62E16 /* Storable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storable.swift; sourceTree = "<group>"; };
+ 		2692D3642BC0553D00A62E16 /* RepositoriesError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesError.swift; sourceTree = "<group>"; };
+-		2692D36B2BC0CB0400A62E16 /* FarmersFridgeCodeChallengeJsonDataStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FarmersFridgeCodeChallengeJsonDataStorage.swift; sourceTree = "<group>"; };
++		2692D36B2BC0CB0400A62E16 /* JsonDataStorageTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonDataStorageTest.swift; sourceTree = "<group>"; };
+ 		2692D36E2BC0DD9200A62E16 /* StemProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StemProcessor.swift; sourceTree = "<group>"; };
+ 		26D104C82BBF1BD5003BBAB8 /* StemmingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StemmingViewController.swift; sourceTree = "<group>"; };
+ 		26D104CD2BBF1D81003BBAB8 /* StemWordsHistoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StemWordsHistoryTableViewController.swift; sourceTree = "<group>"; };
+@@ -154,9 +160,12 @@
+ 		2610DC2C2BBE103400CAE40C /* FarmersFridgeCodeChallengeTests */ = {
+ 			isa = PBXGroup;
+ 			children = (
++				268121A42BC4550F00C0E425 /* Mocks */,
+ 				2610DC2D2BBE103400CAE40C /* FarmersFridgeCodeChallengeTests.swift */,
+-				2692D36B2BC0CB0400A62E16 /* FarmersFridgeCodeChallengeJsonDataStorage.swift */,
+-				265DA8762BC19B12000D2E8B /* FarmersFridgeCodeChallengeStemProcessor.swift */,
++				2692D36B2BC0CB0400A62E16 /* JsonDataStorageTest.swift */,
++				265DA8762BC19B12000D2E8B /* StemProcessorTest.swift */,
++				268121A22BC453F400C0E425 /* StemmingViewModelTest.swift */,
++				268121A72BC4699F00C0E425 /* StemWordHistoryViewModelTest.swift */,
+ 			);
+ 			path = FarmersFridgeCodeChallengeTests;
+ 			sourceTree = "<group>";
+@@ -213,7 +222,7 @@
+ 			isa = PBXGroup;
+ 			children = (
+ 				265DA87F2BC1E5B1000D2E8B /* StemmingViewModel.swift */,
+-				265DA8812BC1E6CF000D2E8B /* StemWordViewModel.swift */,
++				265DA8812BC1E6CF000D2E8B /* StemWordViewCellModel.swift */,
+ 			);
+ 			path = "View Models";
+ 			sourceTree = "<group>";
+@@ -258,6 +267,14 @@
+ 			path = "View Models";
+ 			sourceTree = "<group>";
+ 		};
++		268121A42BC4550F00C0E425 /* Mocks */ = {
++			isa = PBXGroup;
++			children = (
++				268121A52BC4552E00C0E425 /* DataStorageMock.swift */,
++			);
++			path = Mocks;
++			sourceTree = "<group>";
++		};
+ 		2692D35B2BBF7F6200A62E16 /* Resources */ = {
+ 			isa = PBXGroup;
+ 			children = (
+@@ -482,7 +499,7 @@
+ 				2610DC1E2BBE103100CAE40C /* FarmersFridgeCodeChallenge.xcdatamodeld in Sources */,
+ 				26D104D22BBF1DF9003BBAB8 /* StemWordsHistoryTableViewCell.swift in Sources */,
+ 				265DA8792BC19BC6000D2E8B /* Stemable.swift in Sources */,
+-				265DA8822BC1E6CF000D2E8B /* StemWordViewModel.swift in Sources */,
++				265DA8822BC1E6CF000D2E8B /* StemWordViewCellModel.swift in Sources */,
+ 				26D104D02BBF1DD7003BBAB8 /* StemmingTableViewCell.swift in Sources */,
+ 				265DA8892BC24ECC000D2E8B /* StemWordHistoryViewModel.swift in Sources */,
+ 				2692D3652BC0553D00A62E16 /* RepositoriesError.swift in Sources */,
+@@ -498,9 +515,12 @@
+ 			isa = PBXSourcesBuildPhase;
+ 			buildActionMask = 2147483647;
+ 			files = (
+-				2692D36D2BC0D14400A62E16 /* FarmersFridgeCodeChallengeJsonDataStorage.swift in Sources */,
+-				265DA8772BC19B12000D2E8B /* FarmersFridgeCodeChallengeStemProcessor.swift in Sources */,
++				2692D36D2BC0D14400A62E16 /* JsonDataStorageTest.swift in Sources */,
++				268121A62BC4552E00C0E425 /* DataStorageMock.swift in Sources */,
++				268121A82BC4699F00C0E425 /* StemWordHistoryViewModelTest.swift in Sources */,
++				265DA8772BC19B12000D2E8B /* StemProcessorTest.swift in Sources */,
+ 				2610DC2E2BBE103400CAE40C /* FarmersFridgeCodeChallengeTests.swift in Sources */,
++				268121A32BC453F400C0E425 /* StemmingViewModelTest.swift in Sources */,
+ 			);
+ 			runOnlyForDeploymentPostprocessing = 0;
+ 		};
+diff --git a/FarmersFridgeCodeChallenge/View Controllers/StemWordsHistoryViewController/StemWordsHistoryTableViewController.swift b/FarmersFridgeCodeChallenge/View Controllers/StemWordsHistoryViewController/StemWordsHistoryTableViewController.swift
+index 3febed5..29a0dd8 100644
+--- a/FarmersFridgeCodeChallenge/View Controllers/StemWordsHistoryViewController/StemWordsHistoryTableViewController.swift	
++++ b/FarmersFridgeCodeChallenge/View Controllers/StemWordsHistoryViewController/StemWordsHistoryTableViewController.swift	
+@@ -23,7 +23,7 @@ class StemWordsHistoryTableViewController: UITableViewController {
+     }
+     
+     override func viewWillAppear(_ animated: Bool) {
+-        viewModel.loadstemWordHistory()
++        viewModel.loadStemWordHistory()
+     }
+ 
+     // MARK: - Table view data source
+diff --git a/FarmersFridgeCodeChallenge/View Controllers/StemWordsHistoryViewController/View Models/StemWordHistoryViewModel.swift b/FarmersFridgeCodeChallenge/View Controllers/StemWordsHistoryViewController/View Models/StemWordHistoryViewModel.swift
+index 33499d0..a01641c 100644
+--- a/FarmersFridgeCodeChallenge/View Controllers/StemWordsHistoryViewController/View Models/StemWordHistoryViewModel.swift	
++++ b/FarmersFridgeCodeChallenge/View Controllers/StemWordsHistoryViewController/View Models/StemWordHistoryViewModel.swift	
+@@ -27,17 +27,17 @@ class StemWordHistoryViewModel {
+         self.stemWordsData = [StemWordData]()
+     }
+     
+-    func viewModel(for index: Int) -> StemWordViewModel? {
++    func viewModel(for index: Int) -> StemWordViewCellModel? {
+         guard
+             let sStemWordsData = stemWordsData
+         else {
+             return nil
+         }
+ 
+-        return StemWordViewModel(stemWordData: sStemWordsData[index])
++        return StemWordViewCellModel(stemWordData: sStemWordsData[index])
+     }
+     
+-    func loadstemWordHistory() {
++    func loadStemWordHistory() {
+         dataStorage.read().flatMap { self.stemWordsData = $0 }
+     }
+     
+diff --git a/FarmersFridgeCodeChallenge/View Controllers/StemmingViewController/StemmingViewController.swift b/FarmersFridgeCodeChallenge/View Controllers/StemmingViewController/StemmingViewController.swift
+index 51b9c56..d9e21ac 100644
+--- a/FarmersFridgeCodeChallenge/View Controllers/StemmingViewController/StemmingViewController.swift	
++++ b/FarmersFridgeCodeChallenge/View Controllers/StemmingViewController/StemmingViewController.swift	
+@@ -48,7 +48,7 @@ class StemmingViewController: UIViewController {
+     
+     @IBAction func touchUpClearButton(_ sender: UIButton) {
+         inputTextView.text = ""
+-        viewModel.clearHistory()
++        viewModel.clearStemWords()
+     }
+     
+ }
+@@ -82,7 +82,7 @@ extension StemmingViewController: UITableViewDataSource {
+             fatalError("Unable to Dequeue Stemming Table View Cell")
+         }
+ 
+-        if let viewModel = viewModel.viewModel(for: indexPath.row) {
++        if let viewModel = viewModel.viewCellModel(for: indexPath.row) {
+             cell.configure(with: viewModel)
+         }
+ 
+diff --git a/FarmersFridgeCodeChallenge/View Controllers/StemmingViewController/View Models/StemmingViewModel.swift b/FarmersFridgeCodeChallenge/View Controllers/StemmingViewController/View Models/StemmingViewModel.swift
+index 71de6dc..2f9dfda 100644
+--- a/FarmersFridgeCodeChallenge/View Controllers/StemmingViewController/View Models/StemmingViewModel.swift	
++++ b/FarmersFridgeCodeChallenge/View Controllers/StemmingViewController/View Models/StemmingViewModel.swift	
+@@ -10,6 +10,7 @@ import Foundation
+ final class StemmingViewModel {
+     // MARK: - Dependencies
+     private let dataStorage: Storable
++    private let stemProcessor: Stemable
+     var onListDidChange: (() -> Void)? = nil
+     
+     // MARK: - Properties
+@@ -19,27 +20,33 @@ final class StemmingViewModel {
+         }
+     }
+     
++    // MARK: - Initializers
+     init(
+         dataStorage: Storable = JsonDataStorage(),
+-        stemWordsData: StemWordData? = nil
++        stemWordsData: StemWordData? = nil,
++        stemProcessor: Stemable = StemProcessor()
+     ) {
+         self.dataStorage = dataStorage
+         self.stemWordsData = [StemWordData]()
++        self.stemProcessor = stemProcessor
+     }
+     
+-    func viewModel(for index: Int) -> StemWordViewModel? {
++    func viewCellModel(for index: Int) -> StemWordViewCellModel? {
+         guard
+-            let sStemWordsData = stemWordsData
++            let sStemWordsData = stemWordsData,
++            !sStemWordsData.isEmpty
+         else {
+             return nil
+         }
+-
+-        return StemWordViewModel(stemWordData: sStemWordsData[index])
++        
++        return StemWordViewCellModel(stemWordData: sStemWordsData[index])
+     }
+     
+     func stem(_ string: String) {
++        
++        if string.isEmpty { return }
++        
+         let words = string.split(separator: " ").map { String($0) }
+-        let stemProcessor: Stemable = StemProcessor()
+         
+         let inputStemWords = words.map {
+             StemWordData(
+@@ -53,7 +60,7 @@ final class StemmingViewModel {
+         refreshInputSteamWords(inputStemWords)
+     }
+     
+-    func clearHistory() {
++    func clearStemWords() {
+         stemWordsData = nil
+     }
+ }
+diff --git a/FarmersFridgeCodeChallengeTests/Mocks/DataStorageMock.swift b/FarmersFridgeCodeChallengeTests/Mocks/DataStorageMock.swift
+index 5be038b..5a55cc6 100644
+--- a/FarmersFridgeCodeChallengeTests/Mocks/DataStorageMock.swift
++++ b/FarmersFridgeCodeChallengeTests/Mocks/DataStorageMock.swift
+@@ -6,3 +6,54 @@
+ //
+ 
+ import Foundation
++@testable import FarmersFridgeCodeChallenge
++
++class DataStorageMock: Storable {
++    static var readCounter = 0
++    static var writeCounter = 0
++    static var updateCounter = 0
++    static var deleteCounter = 0
++    static var deleteAllCounter = 0
++    
++    private var storedSteamWords: [StemWordData]?
++    
++    
++    func read() -> [StemWordData]? {
++        DataStorageMock.readCounter = DataStorageMock.readCounter + 1
++        
++        return storedSteamWords
++    }
++    
++    func write(_ data: [StemWordData]) {
++        DataStorageMock.writeCounter = DataStorageMock.writeCounter + 1
++        
++        storedSteamWords = data
++    }
++    
++    func update(_ data: StemWordData) {
++        DataStorageMock.updateCounter = DataStorageMock.updateCounter + 1
++    }
++    
++    func delete(_ data: StemWordData) {
++        DataStorageMock.deleteCounter = DataStorageMock.deleteCounter + 1
++        
++        storedSteamWords = nil
++    }
++    
++    func deleteAll() {
++        DataStorageMock.deleteAllCounter = DataStorageMock.deleteAllCounter + 1
++        
++        storedSteamWords = nil
++    }
++    
++}
++
++extension DataStorageMock {
++    static func resetMockCounters() {
++        DataStorageMock.readCounter = 0
++        DataStorageMock.writeCounter = 0
++        DataStorageMock.updateCounter = 0
++        DataStorageMock.deleteCounter = 0
++        DataStorageMock.deleteAllCounter = 0
++    }
++}
+diff --git a/FarmersFridgeCodeChallengeTests/StemWordHistoryViewModelTest.swift b/FarmersFridgeCodeChallengeTests/StemWordHistoryViewModelTest.swift
+index 9fc14b2..11cd54d 100644
+--- a/FarmersFridgeCodeChallengeTests/StemWordHistoryViewModelTest.swift
++++ b/FarmersFridgeCodeChallengeTests/StemWordHistoryViewModelTest.swift
+@@ -6,30 +6,52 @@
+ //
+ 
+ import XCTest
++@testable import FarmersFridgeCodeChallenge
+ 
+ final class StemWordHistoryViewModelTest: XCTestCase {
+ 
+-    override func setUpWithError() throws {
+-        // Put setup code here. This method is called before the invocation of each test method in the class.
++    override func setUp() {
++        DataStorageMock.resetMockCounters()
+     }
+-
+-    override func tearDownWithError() throws {
+-        // Put teardown code here. This method is called after the invocation of each test method in the class.
++    
++    override func tearDown() {
++        
+     }
+-
+-    func testExample() throws {
+-        // This is an example of a functional test case.
+-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+-        // Any test you write for XCTest can be annotated as throws and async.
+-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
+-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
++    
++    func testLoadstemWordHistory_WhenThereAreStoredStemWords_ShouldExecuteBoundClosure() {
++        /// Given
++        let dataStorage: Storable = DataStorageMock()
++        let viewModel: StemWordHistoryViewModel = StemWordHistoryViewModel(dataStorage: dataStorage)
++        
++        
++        viewModel.onListDidChange = {
++            /// Then
++            XCTAssert(viewModel.stemWordsData?.count != 0)
++        }
++        
++        /// When
++        viewModel.loadStemWordHistory()
++        
++        /// Then
++        XCTAssert(DataStorageMock.readCounter == 1)
+     }
+-
+-    func testPerformanceExample() throws {
+-        // This is an example of a performance test case.
+-        self.measure {
+-            // Put the code you want to measure the time of here.
++    
++    func testLoadstemWordHistory_WhenThereAreNotStoredStemWords_ShouldExecuteBoundClosure() {
++        /// Given
++        let dataStorage: Storable = DataStorageMock()
++        let viewModel: StemWordHistoryViewModel = StemWordHistoryViewModel(dataStorage: dataStorage)
++        
++        
++        viewModel.onListDidChange = {
++            /// Then
++            XCTAssert(viewModel.stemWordsData?.isEmpty == true)
+         }
++        
++        /// When
++        viewModel.loadStemWordHistory()
++        
++        /// Then
++        XCTAssert(DataStorageMock.readCounter == 1)
+     }
+ 
+ }
+diff --git a/FarmersFridgeCodeChallengeTests/StemmingViewModelTest.swift b/FarmersFridgeCodeChallengeTests/StemmingViewModelTest.swift
+index cba7f76..b40f11a 100644
+--- a/FarmersFridgeCodeChallengeTests/StemmingViewModelTest.swift
++++ b/FarmersFridgeCodeChallengeTests/StemmingViewModelTest.swift
+@@ -9,9 +9,6 @@ import XCTest
+ @testable import FarmersFridgeCodeChallenge
+ 
+ final class StemmingViewModelTest: XCTestCase {
+-    
+-    private var viewModel: StemmingViewModel = StemmingViewModel()
+-    private var dataStorage: Storable = DataStorageMock()
+ 
+     override func setUp() {
+         DataStorageMock.resetMockCounters()
+@@ -21,15 +18,85 @@ final class StemmingViewModelTest: XCTestCase {
+         
+     }
+     
+-    func testStem_WhenStringIsNotEmpty_ShouldPersistStemWordsAndExecuteBindigClosure() {
++    func testStem_WhenStringIsNotEmpty_ShouldPersistStemWordsAndExecuteBoundClosure() {
+         /// Given
++        let dataStorage: Storable = DataStorageMock()
++        let viewModel: StemmingViewModel = StemmingViewModel(dataStorage: dataStorage)
++        
++        
+         viewModel.onListDidChange = {
+-            XCTAssert(<#T##expression: Bool##Bool#>)
++            /// Then
++            XCTAssert(viewModel.stemWordsData?.count != 0)
+         }
+         
+         /// When
+-
++        viewModel.stem("Words to be stem input")
++        
+         /// Then
++        XCTAssert(DataStorageMock.writeCounter == 1)
++        XCTAssert(DataStorageMock.readCounter == 1)
++    }
++    
++    func testStem_WhenStringIsEmpty_ShoudNotWriteOrReadNietherCallBoundClosure() {
++        /// Given
++        let dataStorage: Storable = DataStorageMock()
++        let viewModel: StemmingViewModel = StemmingViewModel(dataStorage: dataStorage)
++        
++        viewModel.onListDidChange = {
++            XCTFail()
++        }
++        
++        /// When
++        viewModel.stem("")
++        
++        /// Then
++        XCTAssert(DataStorageMock.writeCounter == 0)
++        XCTAssert(DataStorageMock.readCounter == 0)
++    }
++    
++    func testClearStemWords_ShouldRemoveAllStemWords() {
++        /// Given
++        let dataStorage: Storable = DataStorageMock()
++        let viewModel: StemmingViewModel = StemmingViewModel(dataStorage: dataStorage)
++        
++        
++        viewModel.onListDidChange = {
++            /// Then
++            XCTAssertNil(viewModel.stemWordsData)
++        }
++        
++        /// When
++        viewModel.clearStemWords()
++    }
++    
++    func testViewCellModel_WhenThereAreStemWordsToBeDisplayed_ShouldReturnViewCellModel() {
++        /// Given
++        let dataStorage: Storable = DataStorageMock()
++        let viewModel: StemmingViewModel = StemmingViewModel(dataStorage: dataStorage)
++        
++        /// When
++        viewModel.stem("TestWord")
++        
++        let indexPathRow = 0
++        let viewCellModel = viewModel.viewCellModel(for: indexPathRow)
++        
++        /// Then
++        XCTAssertNotNil(viewCellModel)
++        XCTAssertEqual(viewCellModel?.stemWord, "TestWord")
++    }
++    
++    func testViewCellModel_WhenThereAreNotStemWordsToBeDisplayed_ShouldReturnNil() {
++        /// Given
++        let dataStorage: Storable = DataStorageMock()
++        let viewModel: StemmingViewModel = StemmingViewModel(dataStorage: dataStorage)
++        
++        /// When
++        viewModel.stem("")
++        
++        let indexPathRow = 0
++        let viewCellModel = viewModel.viewCellModel(for: indexPathRow)
++        
++        /// Then
++        XCTAssertNil(viewCellModel)
+     }
+-
+ }
